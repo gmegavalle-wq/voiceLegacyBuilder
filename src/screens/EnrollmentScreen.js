@@ -23,7 +23,8 @@ export default function EnrollmentScreen({ navigate }) {
 
     const result = await finish();
     if (result.uri && duration >= MODEL_CONFIG.minRecordingSeconds) setLastUri(result.uri);
-    if (duration < MODEL_CONFIG.minRecordingSeconds) Alert.alert('Grabación corta', 'Graba al menos tres segundos.');
+    if (duration < MODEL_CONFIG.minRecordingSeconds)
+      Alert.alert('Grabación corta', 'Graba al menos tres segundos.');
   };
 
   const acceptRecording = async () => {
@@ -33,7 +34,8 @@ export default function EnrollmentScreen({ navigate }) {
 
   const trainProfile = async () => {
     const profile = await train();
-    if (profile) Alert.alert('Voz entrenada', 'Tu perfil de voz quedó guardado solo en este dispositivo.');
+    if (profile)
+      Alert.alert('Voz entrenada', 'Tu perfil de voz quedó guardado solo en este dispositivo.');
   };
 
   return (
@@ -67,8 +69,17 @@ export default function EnrollmentScreen({ navigate }) {
         <View style={styles.reviewCard}>
           <Text style={styles.successText}>Audio grabado y listo para usar.</Text>
           <View style={styles.row}>
-            <PrimaryButton label="Guardar ejemplo" onPress={acceptRecording} accessibilityLabel="Guardar este ejemplo de voz" />
-            <PrimaryButton label="Descartar" variant="secondary" onPress={() => setLastUri(null)} accessibilityLabel="Descartar este audio" />
+            <PrimaryButton
+              label="Guardar ejemplo"
+              onPress={acceptRecording}
+              accessibilityLabel="Guardar este ejemplo de voz"
+            />
+            <PrimaryButton
+              label="Descartar"
+              variant="secondary"
+              onPress={() => setLastUri(null)}
+              accessibilityLabel="Descartar este audio"
+            />
           </View>
         </View>
       ) : null}

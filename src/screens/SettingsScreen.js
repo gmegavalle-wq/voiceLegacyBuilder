@@ -34,7 +34,9 @@ export default function SettingsScreen({ navigate }) {
         <Text style={styles.item}>Internet: nunca requerido</Text>
         <Text style={styles.item}>Telemetría: desactivada</Text>
         <Text style={styles.item}>Perfil entrenado: {profile ? 'sí' : 'no'}</Text>
-        <Text style={styles.item}>Fecha: {profile ? shortDate(profile.fechaEntrenamiento) : 'sin entrenamiento'}</Text>
+        <Text style={styles.item}>
+          Fecha: {profile ? shortDate(profile.fechaEntrenamiento) : 'sin entrenamiento'}
+        </Text>
       </View>
 
       <View style={styles.card}>

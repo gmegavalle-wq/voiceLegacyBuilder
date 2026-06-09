@@ -8,7 +8,7 @@ export default function RecordingWaveform({ active = false }) {
   const values = useRef(BARS.map(() => new Animated.Value(0.35))).current;
 
   useEffect(() => {
-    const loops = values.map((value, index) => (
+    const loops = values.map((value, index) =>
       Animated.loop(
         Animated.sequence([
           Animated.timing(value, {
@@ -23,7 +23,7 @@ export default function RecordingWaveform({ active = false }) {
           }),
         ])
       )
-    ));
+    );
 
     if (active) {
       loops.forEach((loop) => loop.start());
@@ -36,13 +36,12 @@ export default function RecordingWaveform({ active = false }) {
     <View
       style={styles.container}
       accessible={true}
-      accessibilityLabel={active ? 'Onda de audio animada mientras se graba' : 'Onda de audio en reposo'}
+      accessibilityLabel={
+        active ? 'Onda de audio animada mientras se graba' : 'Onda de audio en reposo'
+      }
     >
       {values.map((value, index) => (
-        <Animated.View
-          key={index}
-          style={[styles.bar, { transform: [{ scaleY: value }] }]}
-        />
+        <Animated.View key={index} style={[styles.bar, { transform: [{ scaleY: value }] }]} />
       ))}
     </View>
   );

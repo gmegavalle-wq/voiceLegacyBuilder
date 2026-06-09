@@ -13,9 +13,10 @@ export default function PrimaryButton({
   loading = false,
 }) {
   const [pressed, setPressed] = useState(false);
-  const gradient = variant === 'secondary'
-    ? [COLORS.panel, COLORS.fondo2]
-    : [COLORS.acentoOscuro, COLORS.acentoSecundario];
+  const gradient =
+    variant === 'secondary'
+      ? [COLORS.panel, COLORS.fondo2]
+      : [COLORS.acentoOscuro, COLORS.acentoSecundario];
 
   return (
     <TouchableOpacity
@@ -31,7 +32,11 @@ export default function PrimaryButton({
       style={[styles.touchTarget, pressed && styles.pressed, disabled && styles.disabled]}
     >
       <LinearGradient colors={gradient} style={styles.gradient}>
-        {loading ? <ActivityIndicator color={COLORS.texto} /> : <Text style={styles.text}>{label}</Text>}
+        {loading ? (
+          <ActivityIndicator color={COLORS.texto} />
+        ) : (
+          <Text style={styles.text}>{label}</Text>
+        )}
       </LinearGradient>
     </TouchableOpacity>
   );

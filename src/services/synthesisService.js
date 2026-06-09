@@ -8,7 +8,8 @@ const crearWavBase64 = (embedding = []) => {
   const buffer = new ArrayBuffer(44 + dataSize);
   const view = new DataView(buffer);
   const writeText = (offset, text) => {
-    for (let index = 0; index < text.length; index += 1) view.setUint8(offset + index, text.charCodeAt(index));
+    for (let index = 0; index < text.length; index += 1)
+      view.setUint8(offset + index, text.charCodeAt(index));
   };
 
   writeText(0, 'RIFF');
@@ -33,7 +34,9 @@ const crearWavBase64 = (embedding = []) => {
 
   let binary = '';
   const bytes = new Uint8Array(buffer);
-  bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
+  bytes.forEach((byte) => {
+    binary += String.fromCharCode(byte);
+  });
   return btoa(binary);
 };
 

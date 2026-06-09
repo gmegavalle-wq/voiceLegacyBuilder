@@ -26,5 +26,12 @@ export default function useVoiceCloning() {
     return nextProfile;
   };
 
-  return { recordings, profile, training, addRecording, train, refreshProfile: () => getVoiceProfile().then(setProfile) };
+  return {
+    recordings,
+    profile,
+    training,
+    addRecording,
+    train,
+    refreshProfile: () => getVoiceProfile().then(setProfile),
+  };
 }

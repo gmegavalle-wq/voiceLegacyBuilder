@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { MODEL_CONFIG } from '../constants';
 import { formatDuration } from '../utils/formatting';
-import { requestRecordingPermission, startRecording, stopRecording } from '../services/audioService';
+import {
+  requestRecordingPermission,
+  startRecording,
+  stopRecording,
+} from '../services/audioService';
 
 export default function useRecording() {
   const [recording, setRecording] = useState(null);

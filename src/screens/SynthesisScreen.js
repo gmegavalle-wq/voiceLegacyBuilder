@@ -53,13 +53,16 @@ export default function SynthesisScreen({ navigate }) {
         accessibilityLabel="Sintetizar el texto usando el perfil de voz local"
       />
 
-      {processing ? <VoiceVisualizer progress={progress} label="Procesando modelos locales" /> : null}
+      {processing ? (
+        <VoiceVisualizer progress={progress} label="Procesando modelos locales" />
+      ) : null}
 
       {result ? (
         <View style={styles.resultCard}>
           <Text style={styles.ready}>Listo</Text>
           <Text style={styles.note}>
-            Archivo WAV generado localmente. Sustituye los modelos en `src/models` para activar Glow-TTS + HiFi-GAN reales.
+            Archivo WAV generado localmente. Sustituye los modelos en `src/models` para activar
+            Glow-TTS + HiFi-GAN reales.
           </Text>
           <AudioPlayer uri={result.uri} label="Resultado sintetizado" />
         </View>

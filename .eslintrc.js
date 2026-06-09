@@ -1,19 +1,15 @@
 module.exports = {
-  root: true,
-  extends: [
-    "expo",
-    "prettier"
-  ],
-  plugins: [
-    "prettier"
-  ],
   env: {
     browser: true,
-    node: true,
-    es2021: true
+    es2021: true,
+    jest: true, // 👈 CLAVE para arreglar describe/it/expect
   },
-  rules: {
-    "prettier/prettier": "warn",
-    "no-console": ["warn", { allow: ["warn", "error"] }]
-  }
+  extends: [
+    "eslint:recommended",
+    "prettier",
+  ],
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
 };

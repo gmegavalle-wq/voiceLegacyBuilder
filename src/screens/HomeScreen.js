@@ -27,7 +27,9 @@ export default function HomeScreen({ navigate }) {
 
       <View style={styles.hero}>
         <Text style={styles.heroIcon}>🎤</Text>
-        <Text style={styles.heroTitle}>{profile ? 'Voz lista para clonar' : 'Tu voz, tus datos'}</Text>
+        <Text style={styles.heroTitle}>
+          {profile ? 'Voz lista para clonar' : 'Tu voz, tus datos'}
+        </Text>
         <Text style={styles.heroText}>
           {profile
             ? `${profile.cantidadAudios} ejemplos protegidos localmente.`
