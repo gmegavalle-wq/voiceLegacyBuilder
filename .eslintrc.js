@@ -7,6 +7,7 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
+    "plugin:prettier/recommended",
   ],
   parser: "@babel/eslint-parser",
   parserOptions: {
@@ -19,5 +20,6 @@ module.exports = {
   },
   rules: {
     "no-unused-vars": "warn",
+    "prettier/prettier": "warn",
   },
 };
