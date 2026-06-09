@@ -24,7 +24,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
+
+      - name: Verify dependencies
+        run: npm ls eslint-config-prettier
 
       - name: Lint code
         run: npm run lint
