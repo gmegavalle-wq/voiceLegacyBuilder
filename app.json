@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Voice Legacy Builder",
+    "slug": "voice-legacy-builder",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F1419"
+    },
+    "platforms": ["android", "ios", "web"],
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.voicelegacybuilder.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "La app necesita el micrófono para grabar ejemplos de tu voz y procesarlos localmente.",
+        "NSLocalNetworkUsageDescription": "Esta aplicación no requiere acceso a la red local.",
+        "NSBonjourServiceTypes": []
+      }
+    },
+    "android": {
+      "package": "com.voicelegacybuilder.voiceclonerlocal",
+      "permissions": ["android.permission.RECORD_AUDIO", "android.permission.VIBRATE"],
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F1419"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "description": "Entrena, guarda y sintetiza voces privadas localmente en tu dispositivo. Sin servidores, sin APIs externas, tu privacidad garantizada.",
+    "author": {
+      "name": "Voice Legacy Team",
+      "email": "contact@voicelegacy.app"
+    },
+    "privacy": "public",
+    "primaryColor": "#00D9FF",
+    "extra": {
+      "eas": {
+        "projectId": "voice-legacy-builder"
+      }
+    }
+  }
+}

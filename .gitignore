@@ -1,0 +1,77 @@
+# Dependencies
+node_modules/
+/.expo/
+/.expo-shared/
+.cache/
+dist/
+dist-web-test/
+build/
+coverage/
+
+# Testing
+.nyc_output/
+*.lcov
+
+# Production
+.next/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Android
+android/.gradle/
+android/.idea/
+android/app/build/
+android/app/.gradle/
+android/build/
+*.keystore
+*.jks
+
+# iOS
+ios/Pods/
+ios/Podfile.lock
+ios/Gemfile.lock
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Audio/Media files (if storing locally)
+*.m4a
+*.wav
+*.mp3
+
+# TensorFlow models (placeholder - add when available)
+*.tflite
+
+# Gradle
+.gradle/
+gradle/
+
+# Temporary files
+*.tmp
+*.bak
+
+# OS
+Thumbs.db
+.DS_Store
+.android-sdk/

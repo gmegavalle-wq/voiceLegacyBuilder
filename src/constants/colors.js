@@ -1,0 +1,17 @@
+export const COLORS = {
+  fondo: '#0F1419',
+  fondo2: '#1A1F2E',
+  panel: '#202738',
+  acento: '#00D9FF',
+  acentoOscuro: '#0587A6',
+  acentoSecundario: '#7C3AED',
+  exito: '#10B981',
+  advertencia: '#F59E0B',
+  error: '#EF4444',
+  texto: '#FFFFFF',
+  textoSecundario: '#D1D5DB',
+  textoMuted: '#9CA3AF',
+  blanco: '#FFFFFF',
+  borde: 'rgba(0, 217, 255, 0.28)',
+  sombra: 'rgba(0, 217, 255, 0.2)',
+};
