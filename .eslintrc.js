@@ -1,13 +1,19 @@
 module.exports = {
   root: true,
-  extends: ['expo', 'prettier'],
-  plugins: ['prettier'],
-  rules: {
-    'prettier/prettier': 'warn',
-    'no-console': ['warn', { allow: ['warn', 'error'] }],
-    'react-native/no-unused-styles': 'warn',
-  },
+  extends: [
+    "expo",
+    "prettier"
+  ],
+  plugins: [
+    "prettier"
+  ],
   env: {
-    'react-native/react-native': true,
+    browser: true,
+    node: true,
+    es2021: true
   },
+  rules: {
+    "prettier/prettier": "warn",
+    "no-console": ["warn", { allow: ["warn", "error"] }]
+  }
 };
