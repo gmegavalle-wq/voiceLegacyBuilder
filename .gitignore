@@ -74,4 +74,6 @@ gradle/
 # OS
 Thumbs.db
 .DS_Store
+
 .android-sdk/
+node_modules/
