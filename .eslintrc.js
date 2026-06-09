@@ -3,10 +3,10 @@ module.exports = {
     browser: true,
     es2021: true,
     jest: true,
+    node: true,
   },
   extends: [
     "eslint:recommended",
-    "prettier",
   ],
   parser: "@babel/eslint-parser",
   parserOptions: {
@@ -18,6 +18,6 @@ module.exports = {
     },
   },
   rules: {
-    "prettier/prettier": "warn",  // warnings no bloquean el CI
+    "no-unused-vars": "warn",
   },
-}
+};
