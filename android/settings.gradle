@@ -44,7 +44,7 @@ if (getRNMinorVersion() >= 75) {
   }
 }
 
-rootProject.name = 'Voice Cloner Local'
+rootProject.name = 'Voice Legacy Builder'
 
 dependencyResolutionManagement {
   versionCatalogs {
