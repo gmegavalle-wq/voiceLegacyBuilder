@@ -25,7 +25,7 @@
     "type-check": "flow check",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "clean": "rm -rf node_modules .expo dist build coverage",
-    "doctor": "expo doctor"
+    "doctor": "node scripts/run-expo-doctor.js"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.3",
@@ -48,15 +48,16 @@
     "@babel/eslint-parser": "^7.29.7",
     "@babel/preset-react": "^7.29.7",
     "@testing-library/react-native": "^12.4.0",
-    "@types/react": "^18.2.0",
-    "babel-preset-expo": "^10.0.1",
+    "@types/react": "~18.2.79",
+    "babel-preset-expo": "~11.0.0",
     "eslint": "^8.56.0",
     "eslint-config-expo": "^7.0.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-react-native": "^5.0.0",
+    "expo-doctor": "^1.10.1",
     "jest": "^29.7.0",
-    "jest-expo": "^50.0.1",
+    "jest-expo": "~51.0.4",
     "prettier": "^3.8.4",
     "react-test-renderer": "18.2.0"
   },

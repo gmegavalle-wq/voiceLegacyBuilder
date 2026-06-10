@@ -37,10 +37,6 @@
       "favicon": "./assets/favicon.png"
     },
     "description": "Entrena, guarda y sintetiza voces privadas localmente en tu dispositivo. Sin servidores, sin APIs externas, tu privacidad garantizada.",
-    "author": {
-      "name": "Voice Legacy Team",
-      "email": "contact@voicelegacy.app"
-    },
     "privacy": "public",
     "primaryColor": "#00D9FF",
     "extra": {
